@@ -9,6 +9,7 @@ node 'TestcmdTJL' {
  include cronagent
  include mydevbox 
  include pdfcrack
+ include git
 
  notice("Test affichage message NOTICE")
 #debug("Test affichage message de DEBUG")
