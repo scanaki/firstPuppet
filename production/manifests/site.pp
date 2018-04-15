@@ -9,7 +9,6 @@ node 'TestcmdTJL' {
  include cronagent
  include mydevbox 
  include pdfcrack
- # 20180415
  include git
 
  notice("Test affichage message NOTICE")
