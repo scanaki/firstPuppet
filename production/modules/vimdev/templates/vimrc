@@ -1,0 +1,9 @@
+syn on;
+colorscheme desert
+
+set nocompatible
+filetype indent plugin on
+set expandtab
+set smarttab
+set autoindent
+runtime macros/matchit.vim
