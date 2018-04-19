@@ -2,6 +2,7 @@ node 'TestcmdTJL' {
 # notify { 'devbox' : 
 #  message => "Configuration node TestcmdTJL",
 # }
+ notify {"Configuration node TestcmdTJL":}
  include bash
  include essential
  include man
