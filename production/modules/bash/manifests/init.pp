@@ -3,11 +3,6 @@ class bash {
 	ensure => latest,
  }
 
- # cat enlightenment 
- package { 'ccat' :
- 	ensure => present,
- }
-
  file { 'bashrc' :
 	ensure => present,
 	path => '/root/.bashrc',
