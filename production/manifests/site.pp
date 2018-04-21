@@ -29,6 +29,7 @@ node 'myvm1', 'myvm2' {
  include essential
  include vim
  include cronagent
+ include mariadb
 }
 
 node default {
