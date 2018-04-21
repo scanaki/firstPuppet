@@ -1,10 +1,15 @@
 # init.pp
 
 class mariadb {
+	notify {"Installing maria db.":}
+
 	package { 'mariadb-server' :
-		ensure => 'lastest', 
+		ensure => 'installed', 
 		require => Exec['apt-update'],
-		notify {"Installing maria db.":}
 	}
 
+	service { 'mariadb' :
+		ensure => running,
+		enable => true,
+	}
 }
