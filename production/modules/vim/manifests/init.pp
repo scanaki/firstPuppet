@@ -1,12 +1,12 @@
 class vim {
  package { 'vim' :
  	ensure	=> installed,
- 	require	=> Exec['apt-update'],
+ 	require	=> Exec['apt-install'],
  }
  
  package { 'vim-doc' :
  	ensure	=> installed,
- 	require	=> Exec['apt-update'],
+ 	require	=> Exec['apt-install'],
  }
  
  file { 'vimrc' :

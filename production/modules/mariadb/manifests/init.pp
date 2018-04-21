@@ -5,7 +5,7 @@ class mariadb {
 
 	package { 'mariadb-server' :
 		ensure => 'installed', 
-		require => Exec['apt-update'],
+		require => Exec['apt-install'],
 	}
 
 	service { 'mariadb' :

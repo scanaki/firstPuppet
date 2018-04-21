@@ -1,7 +1,7 @@
 class cronagent {
  package { 'cron' :
   ensure => installed,
-  require => Exec['apt-update'],
+  require => Exec['apt-install'],
  }
 
  service { 'cron' :

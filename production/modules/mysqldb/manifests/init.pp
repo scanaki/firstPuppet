@@ -4,7 +4,7 @@ class mysqldb (
  ) {
  package { 'mysql-server' :
   ensure	=> present,
-  require	=> Exec['apt-update'],
+  require	=> Exec['apt-install'],
  }
  service { 'mysql' :
   ensure	=> running,

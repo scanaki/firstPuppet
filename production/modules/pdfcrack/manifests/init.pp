@@ -1,6 +1,6 @@
 class pdfcrack {
  package { 'pdfcrack' :
         ensure	=> installed,
-        require	=> Exec['apt-update'],
+        require	=> Exec['apt-install'],
  }
 }

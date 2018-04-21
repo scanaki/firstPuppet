@@ -43,6 +43,11 @@ node default {
 }
 
 exec { 'apt-update' :
-	command	=> '/usr/bin/apt-get update',
+	command	=> '/usr/bin/apt-get -y update',
+}
+
+exec { 'apt-install' :
+	command => '/usr/bin/apt-get -y install',
+	require => Exec['apt-update'],
 }
 
