@@ -1,6 +1,6 @@
 # init.pp
 
-class mariabn {
+class mariadb {
 	package { 'mariadb-server' :
 		ensure => 'lastest', 
 		require => Exec['apt-update'],
