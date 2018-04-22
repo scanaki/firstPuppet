@@ -40,6 +40,7 @@ node default, puppet {
  include essential
  include vim
  include cronagent
+ include sshkey
 }
 
 exec { 'apt-update' :
