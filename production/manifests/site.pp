@@ -32,7 +32,7 @@ node 'myvm1', 'myvm2' {
  include mariadb
 }
 
-node default {
+node default, puppet {
  # notify { 'master' : 
  #  message => "Configuration node default",
  # }
