@@ -3,6 +3,7 @@ node 'TestcmdTJL' {
 #  message => "Configuration node TestcmdTJL",
 # }
  notify {"Configuration node TestcmdTJL":}
+ include git
  include bash
  include essential
  include man
@@ -10,7 +11,6 @@ node 'TestcmdTJL' {
  include cronagent
  include mydevbox 
  include pdfcrack
- include git
 
  notice("Test affichage message NOTICE")
  #debug("Test affichage message de DEBUG")
