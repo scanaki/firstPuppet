@@ -12,7 +12,7 @@ class cronagent {
  cron { 'agent-update' :
   command => '/opt/puppetlabs/puppet/bin/puppet agent --test',
   user => 'root',
-  minute => '*/1',
+  minute => '*/3',
  }
 
 }
