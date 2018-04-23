@@ -11,6 +11,7 @@ node 'TestcmdTJL' {
  include cronagent
  include mydevbox 
  include pdfcrack
+ include htop
 
  notice("Test affichage message NOTICE")
  #debug("Test affichage message de DEBUG")
