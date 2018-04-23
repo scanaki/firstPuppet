@@ -78,8 +78,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # TJL : 20180227 : some more aliases
-alias ll='ls -alF'
-alias la='ls -A'
+alias ll='ls -alhF'
+alias la='ls -lAh'
 alias l='ls -CF'
 alias v='vim -R'
 alias j=jobs
