@@ -8,7 +8,7 @@ class mariadb {
 		require => Exec['apt-install'],
 	}
 
-	service { 'mariadb' :
+	service { 'mysql' :
 		ensure => running,
 		enable => true,
 	}
