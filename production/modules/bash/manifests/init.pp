@@ -7,7 +7,7 @@ class bash {
 	ensure => present,
 	path => '/root/.bashrc',
 	#content => template("${module_name}/${fqdn}/bashrc"),
-	source => "${module_name}/${fqdn}/bashrc",
+	source => "puppet:///modules/${module_name}/${fqdn}/bashrc",
 	require => Package['bash'],
  }
 
