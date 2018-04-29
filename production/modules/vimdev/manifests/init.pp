@@ -28,10 +28,11 @@ class vimdev {
 	mode => '0644',
  }
 
- file { 'vim' :
-   ensure => 'present',
+ file { '/root/.vim' :
+   ensure => 'directory',
+   source => 'puppet:///modules/${module_name}/vim',
+   recurse => remote,
    path => '/root/.vim',
-   source => 'puppet:///modules/vimdev/vim/*',
  }
 	
 }
