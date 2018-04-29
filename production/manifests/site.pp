@@ -33,6 +33,16 @@ node /myvm/ {
  include mariadb
 }
 
+node /apache/ {
+ # notify { 'dbservers' : 
+ #  message => "Configuration node myvm 1 et 2",
+ # }
+ include bash
+ include essential
+ include vim
+ include cronagent
+}
+
 node default, puppet {
  # notify { 'master' : 
  #  message => "Configuration node default",
