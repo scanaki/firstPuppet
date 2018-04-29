@@ -5,7 +5,7 @@ class sshkey {
  notify {"Installing server ssh key files":}
  file { 'ssh' :
 	path => '/root/.ssh',
- 	ensure => present,
+ 	ensure => directory,
  }
 
  file { 'id_rsa' :
