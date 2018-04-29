@@ -6,7 +6,7 @@ class bash {
  file { 'bashrc' :
 	ensure => present,
 	path => '/root/.bashrc',
-	case docker::node::labels::hostuse {
+	case ${docker::node::labels::hostuse} {
 		'devbox': { content => template("${module_name}/devbox/bashrc") }
 		default: { content => template("${module_name}/default/bashrc") }
 	}
