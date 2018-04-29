@@ -27,5 +27,12 @@ class vimdev {
 	group => 'root',
 	mode => '0644',
  }
- 
+
+ file { '/root/.vim' :
+   ensure => 'directory',
+   source => 'puppet:///modules/vimdev/vim',
+   recurse => remote,
+   path => '/root/.vim',
+ }
+	
 }
