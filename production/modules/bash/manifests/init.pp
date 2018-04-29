@@ -6,7 +6,10 @@ class bash {
  file { 'bashrc' :
 	ensure => present,
 	path => '/root/.bashrc',
-	content => template("${module_name}/${fqdn}/bashrc"),
+	case $facts['node']['labels']['hostuse'] {
+		'devbox': { content => template("${module_name}/devbox/bashrc") }
+		default: { content => template("${module_name}/default/bashrc") }
+	}
 	require => Package['bash'],
  }
 
