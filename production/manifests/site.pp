@@ -22,7 +22,7 @@ node 'TestcmdTJL' {
  # fail("Pour info : Ce type de message stop l'execution du process.")
 }
 
-node 'myvm1', 'myvm2' {
+node /myvm/ {
  # notify { 'dbservers' : 
  #  message => "Configuration node myvm 1 et 2",
  # }
