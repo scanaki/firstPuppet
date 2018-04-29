@@ -1,9 +1,23 @@
 syn on;
+syntax enable
 colorscheme desert
 
 set nocompatible
 filetype indent plugin on
+set ts=3
+set sw=3
+set autoindent
+let g:html_use_css = 1 
+set guioptions+=b
+set hlsearch
 set expandtab
 set smarttab
 set autoindent
+set ai
+set nu
+
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 runtime macros/matchit.vim
+
