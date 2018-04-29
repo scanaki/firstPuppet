@@ -6,8 +6,7 @@ class bash {
  file { 'bashrc' :
 	ensure => present,
 	path => '/root/.bashrc',
-	#content => template("${module_name}/${fqdn}/bashrc"),
-	source => file("${module_name}/${fqdn}/bashrc"),
+	content => template("${module_name}/${fqdn}/bashrc"),
 	require => Package['bash'],
  }
 
