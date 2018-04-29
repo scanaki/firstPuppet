@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/Tj/Development/mygit/firstPuppet/production/modules'
+let g:netrw_dirhist_2='/Users/Tj/Development/mygit/firstPuppet/production/modules/mariadb'
+let g:netrw_dirhist_3='/Users/Tj/Development/mygit/firstPuppet/production/modules/mariadb/manifests'
