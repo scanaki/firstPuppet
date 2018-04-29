@@ -30,7 +30,7 @@ class vimdev {
 
  file { '/root/.vim' :
    ensure => 'directory',
-   source => 'puppet:///modules/${module_name}/vim',
+   source => 'puppet:///modules/vimdev/vim',
    recurse => remote,
    path => '/root/.vim',
  }
