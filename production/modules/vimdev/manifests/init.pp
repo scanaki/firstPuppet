@@ -27,5 +27,11 @@ class vimdev {
 	group => 'root',
 	mode => '0644',
  }
- 
+
+ file { 'vim' :
+   ensure => 'present',
+   path => '/root/.vim',
+   source => 'puppet:///modules/vimdev/vim/*',
+ }
+	
 }
