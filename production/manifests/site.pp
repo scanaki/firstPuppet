@@ -1,4 +1,4 @@
-node 'TestcmdTJL', 'ubox' {
+node 'TestcmdTJL' {
 # notify { 'devbox' : 
 #  message => "Configuration node TestcmdTJL",
 # }
