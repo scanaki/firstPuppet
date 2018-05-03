@@ -1,4 +1,13 @@
 class apache {
+ package { 'apache2' :
+ 	ensure => present,
+ }
+
+ service { 'httpd' :
+ 	ensure => running,
+	enable => true,
+ }
+
  define apache::virtualhost (
   $ensure = present,
   $template = 'apache/virtualhost.conf.erb',
