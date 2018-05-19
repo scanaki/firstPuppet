@@ -3,7 +3,7 @@
 # @date: 20180516
 # @desc: Ensure ntp service
 
-define ntp::service {
+class ntp::service inherits ntp {
 
 	case $operatingsystem {
 		centos, redhat: { $service_name = 'ntpd' }

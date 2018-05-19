@@ -3,7 +3,7 @@
 # @date: 20180516
 # @desc: Configure ntp service
 
-define ntp::configure {
+class ntp::configure inherits ntp {
 
 	file { 'ntp.conf' :
 		path		=> '/etc/ntp.conf',

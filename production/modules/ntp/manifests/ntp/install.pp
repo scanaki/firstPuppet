@@ -3,7 +3,7 @@
 # @date: 20180516
 # @desc: Install ntp service
 
-define ntp::install {
+class ntp::install inherits ntp {
 
 	package { 'ntp' : 
 		ensure => installed,
