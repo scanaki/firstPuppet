@@ -31,6 +31,7 @@ node /myvm/ {
  include vim
  include cronagent
  include mariadb
+ include connectors
 }
 
 node /apache/ {
@@ -41,6 +42,7 @@ node /apache/ {
  include essential
  include vim
  include cronagent
+ include connectors
 }
 
 node default, puppet {
