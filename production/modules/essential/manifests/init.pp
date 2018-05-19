@@ -14,6 +14,6 @@ class essential {
  	require => Exec['apt-install'],
  }
 
- include ntp
+# include ntp
 }
 
