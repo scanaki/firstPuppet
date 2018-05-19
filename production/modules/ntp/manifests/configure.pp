@@ -8,7 +8,7 @@ class ntp::configure inherits ntp {
 	file { 'ntp.conf' :
 		path		=> '/etc/ntp.conf',
 		ensure	=> file,
-		require	=> Package['ntp'],
+		#require	=> Package['ntp'],
 		source	=> "puppet://modules/ntp/ntp.conf",
 	}
 
