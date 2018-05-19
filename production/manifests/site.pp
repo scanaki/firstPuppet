@@ -35,7 +35,7 @@ node /myvm/ {
  include javaruntime
 }
 
-node /apache/ {
+node /apach/ {
  # notify { 'dbservers' : 
  #  message => "Configuration node myvm 1 et 2",
  # }
