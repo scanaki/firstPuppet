@@ -32,6 +32,7 @@ node /myvm/ {
  include cronagent
  include mariadb
  include connectors
+ include javaruntime
 }
 
 node /apache/ {
