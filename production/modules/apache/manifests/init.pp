@@ -6,7 +6,7 @@
 class apache {
 
  class { 'apache::service' :} ->
- class { 'apache::configure' :} ->
+# class { 'apache::configure' :} ->
  class { 'apache::install' :}
 
 }
