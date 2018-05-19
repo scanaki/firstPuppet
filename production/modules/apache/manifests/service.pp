@@ -5,7 +5,7 @@
 
 class apache::service inherits apache {
 
- service { 'httpd' :
+ service { 'apache2' :
  	ensure => running,
 	enable => true,
  }
