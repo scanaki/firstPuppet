@@ -44,6 +44,7 @@ node /apache/ {
  include vim
  include cronagent
  include connectors
+ include apache
 }
 
 node default, puppet {
