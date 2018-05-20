@@ -5,21 +5,6 @@
 
 class apache::service inherits apache {
 
- notify { "Setting apache 2 config files" :}
- file { 'apache2.conf' :
- 	ensure	=> present,
-	path		=> '/etc/apache2/apache2.conf',
-	#content	=> template("${module_name}/apache2.conf.erb"),
-	source	=> "puppet:///modules/${module_name}/apache2.conf",
- }
-
- file { 'ports.conf' :
- 	ensure	=> present,
-	path		=> '/etc/apache2/ports.conf',
-	#content	=> template("${module_name}/ports.conf.erb"),
-	source	=> "puppet:///modules/${module_name}/ports.conf",
- }
-
  notify { "Running apache 2 service" :}
  service { 'apache2' :
  	ensure   => running,
