@@ -14,6 +14,11 @@ class essential {
  	require => Exec['apt-install'],
  }
 
+ package { 'locate' :
+ 	ensure => installed,
+ 	require => Exec['apt-install'],
+ }
+
 # include ntp
 }
 

@@ -11,5 +11,21 @@ class apache::install inherits apache {
  	ensure => present,
  }
 
+ package { 'apache2-bin' :
+ 	ensure => present,
+ }
+
+ package { 'apache2-data' :
+ 	ensure => present,
+ }
+
+ package { 'apache2-utils' :
+ 	ensure => present,
+ }
+
+ package { 'apache2-doc' :
+ 	ensure => present,
+ }
+
 }
 
