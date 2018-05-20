@@ -33,6 +33,7 @@ node /myvm/ {
  include mariadb
  include connectors
  include javaruntime
+ include liquibase
 }
 
 node /apach/ {
@@ -44,6 +45,7 @@ node /apach/ {
  include vim
  include cronagent
  include connectors
+ include javaruntime
  include apache
  include php7 
 }
