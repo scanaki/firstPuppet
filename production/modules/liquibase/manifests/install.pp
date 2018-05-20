@@ -10,10 +10,8 @@ class liquibase::install inherits liquibase {
 	# https://github.com/liquibase/liquibase/releases/download/liquibase-parent-3.6.1/liquibase-3.6.1-bin.tar.gz
 	notify { "Starting liquibase class in order to install and configure liquibase" :}
 	
-	package { 'liquibase' :
-		$version	   =	'3.6.1',
-		$apps_name	=	"liquibase-${version}-bin.tar.gz"
-	} ->
+	$version	   = '3.6.1',
+	$apps_name	= "liquibase-${version}-bin.tar.gz"
 
 	notify { "Downloading liquibase" :}
 	exec { 'apps_wget' :
