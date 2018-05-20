@@ -22,7 +22,7 @@ class apache::service inherits apache {
  service { 'apache2' :
  	ensure   => running,
 	enable    => true,
-	subscribe => File[ { 'apache2.conf' , 'ports.conf' } ]
+	subscribe => File['apache2.conf','ports.conf'],
  }
 }
 
