@@ -7,10 +7,6 @@ class apache::install inherits apache {
 
  notify { 'Installing apache 2 server' :}
 
- package { 'apache2' :
- 	ensure => present,
- }
-
  package { 'apache2-bin' :
  	ensure => present,
  }
@@ -24,6 +20,10 @@ class apache::install inherits apache {
  }
 
  package { 'apache2-doc' :
+ 	ensure => present,
+ }
+
+ package { 'apache2' :
  	ensure => present,
  }
 
