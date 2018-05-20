@@ -38,4 +38,6 @@ class liquibase::install inherits liquibase {
 		command	 => '/bin/bash -c export CLASSPATH="/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"',
 	}
 
+	Exec { environment => [ 'LIQUIBASE_HOME=/op/liquibase', 'CLASSPATH="/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"' ] }
+
 }
