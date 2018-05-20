@@ -16,7 +16,7 @@ class liquibase::install inherits liquibase {
 	notify { "Downloading liquibase" :}
 	exec { 'apps_wget' :
 		command	 => "/usr/bin/wget https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${version}/${apps_name} -O /tmp/${apps_name}",
-		unless	 => "test -f /tmp/${apps_name}",
+		unless	 => "/usr/bin/test -f /tmp/${apps_name}",
 	} ->
 
 	notify { "Unzipping liquibase" :}
