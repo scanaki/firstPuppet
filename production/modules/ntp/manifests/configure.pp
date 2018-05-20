@@ -10,7 +10,7 @@ class ntp::configure inherits ntp {
 		path		=> '/etc/ntp.conf',
 		ensure	=> file,
 		#require	=> Package['ntp'],
-		source	=> "puppet://modules/ntp/ntp.conf",
+		#source	=> "puppet://modules/ntp/ntp.conf",
 		content	=> template("ntp/ntp.conf.erb"),
 	}
 
