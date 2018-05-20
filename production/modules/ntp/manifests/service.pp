@@ -14,7 +14,7 @@ class ntp::service inherits ntp {
 		name => $service_name,
 		ensure => running,
 		enable => true,
-		subscribe => File['ntp.conf'],
+		#subscribe => File['ntp.conf'],
 	}
 }
 
