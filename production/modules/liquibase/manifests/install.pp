@@ -13,6 +13,10 @@ class liquibase::install inherits liquibase {
 	$version	   = '3.6.1'
 	$apps_name	= "liquibase-${version}-bin.tar.gz"
 
+	file { '/opt/liquibase' :
+		ensure	 => directory,
+	}
+
 	notify { "Downloading liquibase" :}
 	exec { 'apps_wget' :
 		command	 => "/usr/bin/wget https://github.com/liquibase/liquibase/releases/download/liquibase-parent-${version}/${apps_name} -O /tmp/${apps_name}",
