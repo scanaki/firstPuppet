@@ -30,10 +30,12 @@ class liquibase::install inherits liquibase {
 		#unless	     => "test -f /opt/liquibase/",
 	}
 
-	exec { 'liquibase-env' :
-		command	 => [
-			'/bin/bash -c export LIQUIBASE_HOME="/op/liquibase"', '/bin/bash -c export CLASSPATH="/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"'
-		],
+	exec { 'liquibase-env-home' :
+		command	 => '/bin/bash -c export LIQUIBASE_HOME="/op/liquibase"'
+	}
+
+	exec { 'liquibase-env-cp' :
+		command	 => '/bin/bash -c export CLASSPATH="/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"',
 	}
 
 }
