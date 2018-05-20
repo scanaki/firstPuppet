@@ -59,11 +59,13 @@ node default, puppet {
 }
 
 exec { 'apt-update' :
-	command	=> '/usr/bin/apt-get -y update',
+	#command	=> '/usr/bin/apt-get -y update',
+	command	=> '/usr/bin/apt update -y',
 }
 
 exec { 'apt-install' :
-	command => '/usr/bin/apt-get -y install',
+	#command => '/usr/bin/apt-get -y install',
+	command => '/usr/bin/apt install -y',
 	require => Exec['apt-update'],
 }
 
