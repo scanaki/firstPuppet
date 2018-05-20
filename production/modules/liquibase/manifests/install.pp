@@ -11,8 +11,8 @@ class liquibase::install inherits liquibase {
 	notify { "Starting liquibase class in order to install and configure liquibase" :}
 	
 	package { 'liquibase' :
-		version	   =>	'3.6.1',
-		apps_name	=>	"liquibase-${version}-bin.tar.gz"
+		$version	   =	'3.6.1',
+		$apps_name	=	"liquibase-${version}-bin.tar.gz"
 	} ->
 
 	notify { "Downloading liquibase" :}
