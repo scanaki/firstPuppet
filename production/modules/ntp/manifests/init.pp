@@ -4,6 +4,7 @@
 # @desc: Install and configure ntpd
 
 class ntp {
+	notify { "Starting ntp class to install and configure ntp client." :}
 	class { 'ntp::install' :} ->
 	class { 'ntp::configure' :} ~>
 	class { 'ntp::service' :}

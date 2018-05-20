@@ -5,6 +5,7 @@
 
 class ntp::configure inherits ntp {
 
+	notify { "Configuring ntp client : deploying ntp.conf file" :}
 	file { 'ntp.conf' :
 		path		=> '/etc/ntp.conf',
 		ensure	=> file,

@@ -5,6 +5,7 @@
 
 class ntp::install inherits ntp {
 
+	notify { "Installing ntp client." :}
 	package { 'ntp' : 
 		ensure => installed,
 	}

@@ -10,6 +10,7 @@ class ntp::service inherits ntp {
 		debian, ubuntu: { $service_name = 'ntp' }
 	}
 
+	notify { "Running ntp service." :}
 	service { 'ntp' : 
 		name => $service_name,
 		ensure => running,
