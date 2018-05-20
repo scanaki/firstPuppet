@@ -4,7 +4,7 @@
 # @desc: Install and configure ntpd
 
 class ntp {
-	class { 'ntp::service' :} ->
-	class { 'ntp::configure' :} ->
-	class { 'ntp::install' :}
+	class { 'ntp::install' :} ->
+	class { 'ntp::configure' :} ~>
+	class { 'ntp::service' :}
 }
