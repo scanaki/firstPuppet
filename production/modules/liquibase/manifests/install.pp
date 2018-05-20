@@ -28,7 +28,9 @@ class liquibase::install inherits liquibase {
 		cwd		        => '/opt/liquibase',
 		command	     => "/bin/tar xvzf /tmp/${apps_name}",
 		#unless	     => "test -f /opt/liquibase/",
-		environment	 => "LIQUIBASE_HOME=/op/liquibase",
+		environment	 => [
+			"LIQUIBASE_HOME=/op/liquibase", "CLASSPATH=/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"
+		],
 	}
 
 }
