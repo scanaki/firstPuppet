@@ -1,4 +1,4 @@
-# @file:		init.pp
+# @file:		javaruntime/manifests/init.pp
 # @author:	Thierry JEAN-LOUIS
 # @date:		20180519
 # @desc:		Install Java runtime

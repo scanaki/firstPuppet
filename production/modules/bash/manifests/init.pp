@@ -1,3 +1,8 @@
+# @file:		init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		Install and configure bash
+
 class bash {
  package { 'bash' :
 	ensure => latest,

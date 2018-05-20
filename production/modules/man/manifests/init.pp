@@ -1,3 +1,8 @@
+# @file:		man/manifests/init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		install man pages
+
 class man {
  package { 'man' :
  	ensure => installed,

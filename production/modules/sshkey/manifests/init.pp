@@ -1,4 +1,7 @@
-# init.pp
+# @file:		sshkey/manifests/init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		Install ssh keys
 
 class sshkey {
 

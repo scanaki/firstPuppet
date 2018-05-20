@@ -1,4 +1,4 @@
-# @file: init.pp
+# @file: sshd/manifests/init.pp
 # @author:	Thierry JEAN-LOUIS
 # @date: 20180517
 # @desc: ssh deamon

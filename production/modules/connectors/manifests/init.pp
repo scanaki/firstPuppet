@@ -1,4 +1,4 @@
-# @file:		init.pp
+# @file:		connectors/manifest/init.pp
 # @author:	Thierry JEAN-LOUIS
 # @date:		20180519
 

@@ -1,4 +1,4 @@
-# @file:		init.pp
+# @file:		apache/manifests/init.pp
 # @author:	Thierry JEAN-LOUIS
 # @date:		20180520
 # @desc:		install and configure apache server

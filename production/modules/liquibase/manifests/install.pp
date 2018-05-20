@@ -1,4 +1,4 @@
-# @file:			install.pp
+# @file:			liquibase/manifests/install.pp
 # @author:		Thierry JEAN-LOUIS
 # @date: 		20180520
 # @desc:			liquibase installation class

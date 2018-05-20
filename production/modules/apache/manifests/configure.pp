@@ -1,4 +1,4 @@
-# @file:		configure.pp
+# @file:		apache/manifests/configure.pp
 # @author:	Thierry JEAN-LOUIS
 # @date:		20180520
 # @desc:		configure apache server

@@ -1,3 +1,8 @@
+# @file:		init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		Install essential packages for all hosts
+
 class essential {
  package { 'wget' :
  	ensure	=> installed,

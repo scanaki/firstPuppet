@@ -1,3 +1,8 @@
+# @file:		vim/manifests/init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		install vim and vim man pages
+
 class vim {
  package { 'vim' :
  	ensure	=> installed,

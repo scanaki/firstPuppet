@@ -1,3 +1,8 @@
+# @file:		git/manifests/init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		Install git commands.
+
 class git {
 
  notify {"Install git commands":}

@@ -1,3 +1,8 @@
+# @file:		mydevbox/manifests/init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		Installing dev tools for my devbox
+
 class mydevbox {
 
  package { 'groovy2' :

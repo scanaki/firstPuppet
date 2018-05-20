@@ -1,3 +1,8 @@
+# @file:		vimdev/manifests/init.pp
+# @author:	Thierry JEAN-LOUIS
+# @date:		20180520
+# @desc:		Install vim extra packages
+
 class vimdev {
  package { 'vim' :
  	ensure	=> installed,
