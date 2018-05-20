@@ -5,26 +5,34 @@
 
 class apache::install inherits apache {
 
- notify { 'Installing apache 2 server' :}
+ notify { 'Installing apache 2 binaries' :}
 
  package { 'apache2-bin' :
- 	ensure => present,
+ 	ensure => installed,
  }
+
+ notify { 'Installing apache 2 data' :}
 
  package { 'apache2-data' :
- 	ensure => present,
+ 	ensure => installed,
  }
+
+ notify { 'Installing apache 2 utils' :}
 
  package { 'apache2-utils' :
- 	ensure => present,
+ 	ensure => installed,
  }
+
+ notify { 'Installing apache 2 doc and man pages' :}
 
  package { 'apache2-doc' :
- 	ensure => present,
+ 	ensure => installed,
  }
 
+ notify { 'Installing apache 2 server' :}
+
  package { 'apache2' :
- 	ensure => present,
+ 	ensure => installed,
  }
 
 }
