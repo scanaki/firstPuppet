@@ -6,7 +6,7 @@
 class apache {
 
  notify { "Running apache module to install and configure apache2 server" :}
- class { 'apache::service' :} ->
+# class { 'apache::service' :} ->
 # class { 'apache::configure' :} ->
  class { 'apache::install' :}
 
