@@ -9,13 +9,13 @@ class apache::service inherits apache {
  file { 'apache2.conf' :
  	ensure	=> present,
 	path		=> '/etc/apache2/apache2.conf',
-	source	=> template("${module_name}/apache2.conf"),
+	source	=> template("${module_name}/apache2.conf.erb"),
  }
 
  file { 'ports.conf' :
  	ensure	=> present,
 	path		=> '/etc/apache2/ports.conf',
-	source	=> template("${module_name}/ports.conf"),
+	source	=> template("${module_name}/ports.conf.erb"),
  }
 
  notify { "Running apache 2 service" :}
