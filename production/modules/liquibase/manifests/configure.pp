@@ -15,8 +15,18 @@ class liquibase::configure inherits liquibase {
 	}
 
 	exec { 'liquibase-version' :
-		environment => [ 'LIQUIBASE_HOME=/op/liquibase', 'CLASSPATH="/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"' ],
-		#command		=> '/opt/liquibase/liquibase -version',
+		environment => [ 
+			'LIQUIBASE_HOME=/op/liquibase', 
+			'CLASSPATH="/opt/liquibase:/opt/liquibase/lib:${CLASSPATH}"',
+			'MYSQL_JCONNECTOR=/usr/share/java/mysql-connector-java.jar'
+		],
+		cwd			=> '/opt/liquibase',
+		command		=> '/opt/liquibase/liquibase -version',
+		path			=> [ 
+			'/opt/liquibase',
+			'/opt/liquibase/lib',
+			'/usr/share/java'
+		],
 	}
 
 }
