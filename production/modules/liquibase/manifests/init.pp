@@ -5,6 +5,6 @@
 
 
 class liquibase {
-	class { 'liquibase::install' :}
-
+	class { 'liquibase::install' :} ->
+	class { 'liquibase::configure' :}
 }
