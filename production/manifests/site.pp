@@ -45,6 +45,7 @@ node /apach/ {
  include cronagent
  include connectors
  include apache
+ include php7 
 }
 
 node default, puppet {
