@@ -86,6 +86,7 @@ alias v='vim -R'
 alias j=jobs
 alias p='ps aux'
 alias h='history'
+alias pat='puppet agent --test'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
