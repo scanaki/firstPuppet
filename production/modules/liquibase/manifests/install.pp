@@ -12,8 +12,9 @@ class liquibase::install inherits liquibase {
 	
 	$version	   = '3.6.1'
 	$apps_name	= "liquibase-${version}-bin.tar.gz"
+	$liquibase_home = '/opt/liquibase'
 
-	file { '/opt/liquibase' :
+	file { "${liquibase_home}" :
 		ensure	 => directory,
 	}
 
@@ -25,8 +26,8 @@ class liquibase::install inherits liquibase {
 
 	notify { "Unzipping liquibase" :}
 	exec { 'apps_unzip' :
-		cwd		        => '/opt/liquibase',
+		cwd		        => "${liquibase_home}",
 		command	     => "/bin/tar xvzf /tmp/${apps_name}",
-		#unless	     => "test -f /opt/liquibase/",
+		unless	     => "/usr/bin/test -f ${liquibase_home}/liquibase",
 	}
 }
