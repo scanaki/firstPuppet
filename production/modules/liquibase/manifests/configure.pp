@@ -28,7 +28,7 @@ class liquibase::configure inherits liquibase {
 			'MYSQL_JCONNECTOR=/usr/share/java/mysql-connector-java.jar'
 		],
 		cwd		=> '/opt/liquibase',
-		command	=> 'liquibase -version',
+		command	=> '/bin/bash -c liquibase -version',
 		path		=> [ 
 			'/opt/liquibase',
 			'/opt/liquibase/lib',
