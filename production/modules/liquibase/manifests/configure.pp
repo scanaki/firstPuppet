@@ -17,7 +17,7 @@ class liquibase::configure inherits liquibase {
 	file { 'liquibase.properties' :
 		ensure 	=> present,
 		path	 	=> "${liquibase_home}/liquibase.properties",
-		content	=> templates("liquibase/liquibase.properties.erb"),
+		content	=> template("liquibase/liquibase.properties.erb"),
 	}
 
 	notify { "Liquibase configuration : Verifying liquibasee version" :}
