@@ -11,10 +11,10 @@ class sshd {
 
 ## Ci-dessous une ecriture identique
 
- file { '/etc/ssh/sshd_config' :
+ file { '/etc/ssh/ssh_config' :
   ensure   => file,
   mode    => '0600',
-  source   => 'puppet:///modules/sshd/sshd_config',
+  source   => 'puppet:///modules/sshd/ssh_config',
  } ~>
 
  service { 'sshd' :
