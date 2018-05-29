@@ -17,7 +17,7 @@ class sshd {
   source   => 'puppet:///modules/sshd/ssh_config',
  } ~>
 
- service { 'sshd' :
+ service { 'ssh' :
   ensure      => running,
   enable     => true,
  }
