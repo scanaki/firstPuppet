@@ -1,4 +1,4 @@
-node 'TestcmdTJL' {
+node 'TestcmdTJL', /devbox/ {
 # notify { 'devbox' : 
 #  message => "Configuration node TestcmdTJL",
 # }
@@ -36,7 +36,7 @@ node /myvm/ {
  include liquibase
 }
 
-node /apach/ {
+node /apach/, /web/ {
  # notify { 'dbservers' : 
  #  message => "Configuration node myvm 1 et 2",
  # }
